@@ -1,6 +1,6 @@
 Build Notes
 ====
-Original article found here [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/)
+Original rticle found here [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/)
 
 
 Load/Install qemu
@@ -43,5 +43,5 @@ Platforms: linux/amd64, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, 
 
 Go ahead and build (this is slow)
 ```
-$ docker buildx build --platform linux/arm,linux/arm64,linux/amd64 -t brabidou/docker-dante-pi:latest . --push 
+$ docker buildx build --platform linux/arm,linux/arm64 -t brabidou/docker-dante-pi:latest . --push 
 ```

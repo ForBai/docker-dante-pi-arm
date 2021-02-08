@@ -1,0 +1,11 @@
+image: brabidou/docker-dante-pi:multiarch
+manifests:
+  - image: brabidou/docker-dante-pi:multiarch-arm32
+    platform:
+      architecture: arm
+      os: linux
+
+  - image: brabidou/docker-dante-pi:multiarch-arm64
+    platform:
+      architecture: arm64
+      os: linux
