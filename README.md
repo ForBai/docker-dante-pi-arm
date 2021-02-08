@@ -1,7 +1,9 @@
+Notes
+================================================
+This is a fork of [wernight/docker-dante's](https://github.com/wernight/docker-dante) repository but modified to suport the ARM architecture of the Raspberry Pi
+
 Supported tags and respective `Dockerfile` links
 ================================================
-
-  * [`latest` (Dockerfile)](https://github.com/wernight/docker-dante/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/wernight/dante.svg)](https://microbadger.com/images/wernight/dante "Get your own image badge on microbadger.com")
 
 
 What is Dante
@@ -13,7 +15,7 @@ What is Dante
 Usage example
 -------------
 
-    $ docker run -d -p 1080:1080 wernight/dante
+    $ docker run -d -p 1080:1080 brabidou/dante
 
 Change its configuration by mounting a custom `/etc/sockd.conf`
 (see [sample config files](http://www.inet.no/dante/doc/latest/config/server.html)).
@@ -37,7 +39,7 @@ like for example:
 
 The default config in this image allows everyone to use the proxy. You can add a simple authentication (which will send data unencrypted) by setting up a `Dockerfile` like:
 
-    FROM wernight/dante
+    FROM brabidou/dante
 
     # TODO: Replace 'john' and 'MyPassword' by any username/password you want.
     RUN printf 'MyPassword\nMyPassword\n' | adduser john
@@ -58,4 +60,4 @@ WARNING: Many browsers do **not** support SOCKS authentication (e.g. see this [C
 Feedbacks
 ---------
 
-Suggestions are welcome on our [GitHub issue tracker](https://github.com/wernight/docker-dante/issues).
+Suggestions are welcome on our [GitHub issue tracker](https://github.com/brabidou/docker-dante-pi/issues).
