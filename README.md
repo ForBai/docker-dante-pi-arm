@@ -15,7 +15,7 @@ What is Dante
 Usage example
 -------------
 
-    $ docker run -d -p 1080:1080 brabidou/dante
+    $ docker run -d -p 1080:1080 brabidou/docker-dante-pi
 
 Change its configuration by mounting a custom `/etc/sockd.conf`
 (see [sample config files](http://www.inet.no/dante/doc/latest/config/server.html)).
@@ -39,7 +39,7 @@ like for example:
 
 The default config in this image allows everyone to use the proxy. You can add a simple authentication (which will send data unencrypted) by setting up a `Dockerfile` like:
 
-    FROM brabidou/dante
+    FROM brabidou/docker-dante-pi
 
     # TODO: Replace 'john' and 'MyPassword' by any username/password you want.
     RUN printf 'MyPassword\nMyPassword\n' | adduser john
