@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi4-64-alpine:latest
+FROM balenalib/raspberry-pi-alpine:latest
 # TODO: Various optional modules are currently disabled (see output of ./configure):
 # - Libwrap is disabled because tcpd.h is missing.
 # - BSD Auth is disabled because bsd_auth.h is missing.

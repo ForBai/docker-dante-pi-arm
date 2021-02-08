@@ -1,10 +1,8 @@
 Notes
 ================================================
-This is a fork of [wernight/docker-dante's](https://github.com/wernight/docker-dante) repository but modified to suport the ARM architecture of the Raspberry Pi
+- I have tested this on the RaspberryPi 3 b+ and RaspberryPi 4.
 
-Supported tags and respective `Dockerfile` links
-================================================
-
+- This is a fork of [wernight/docker-dante's](https://github.com/wernight/docker-dante) repository but modified to suport the ARM architecture of the Raspberry Pi
 
 What is Dante
 -------------
@@ -15,7 +13,9 @@ What is Dante
 Usage example
 -------------
 
-    $ docker run -d -p 1080:1080 brabidou/docker-dante-pi
+    $ docker run -d -p 1080:1080 --restart=always brabidou/docker-dante-pi
+*`--restart=always` flag will reboot Dante on startup. It is optional*
+
 
 Change its configuration by mounting a custom `/etc/sockd.conf`
 (see [sample config files](http://www.inet.no/dante/doc/latest/config/server.html)).
@@ -23,21 +23,14 @@ Change its configuration by mounting a custom `/etc/sockd.conf`
 
 ### Client-side set up
 
-Set your browser or application to use SOCKS v4 or v5 proxy `localhost` on port 1080,
-like for example:
+Set your browser or application to use SOCKS v4 or v5 proxy `localhost` on port 1080, for example:
 
     $ curl --proxy socks5://localhost:1080 https://example.com
-
-... or set to use PAC script like:
-
-    function FindProxyForURL(url, host) {
-      return "SOCKS localhost:1080";
-    }
 
 
 ### Requiring authentication
 
-The default config in this image allows everyone to use the proxy. You can add a simple authentication (which will send data unencrypted) by setting up a `Dockerfile` like:
+The default config in this image allows everyone to use the proxy. You can add a simple authentication (which will send data unencrypted) by setting up a new `Dockerfile`:
 
     FROM brabidou/docker-dante-pi
 
