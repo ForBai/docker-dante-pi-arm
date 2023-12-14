@@ -32,7 +32,7 @@ Set your browser or application to use SOCKS v4 or v5 proxy `localhost` on port 
 
 The default config in this image allows everyone to use the proxy. You can add a simple authentication (which will send data unencrypted) by setting up a new `Dockerfile`:
 
-    FROM brabidou/docker-dante-pi
+    FROM forbai/docker-dante-pi-arm
 
     # TODO: Replace 'john' and 'MyPassword' by any username/password you want.
     RUN printf 'MyPassword\nMyPassword\n' | adduser john
@@ -53,4 +53,4 @@ WARNING: Many browsers do **not** support SOCKS authentication (e.g. see this [C
 Feedbacks
 ---------
 
-Suggestions are welcome on our [GitHub issue tracker](https://github.com/brabidou/docker-dante-pi/issues).
+Suggestions are welcome on our [GitHub issue tracker](https://github.com/forbai/docker-dante-pi-arm/issues).
