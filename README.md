@@ -2,7 +2,7 @@ Notes
 ================================================
 - I have tested this on the RaspberryPi 3 b+ and RaspberryPi 4.
 
-- This is a fork of [wernight/docker-dante's](https://github.com/wernight/docker-dante) repository but modified to suport the ARM architecture of the Raspberry Pi
+- This is a fork of [brabidou/docker-dante-pi's](https://github.com/brabidou/docker-dante-pi) repository but modified to suport the ARM architecture of the Raspberry Pi
 
 What is Dante
 -------------
